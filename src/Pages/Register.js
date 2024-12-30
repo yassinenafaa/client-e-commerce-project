@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { register } from "../JS/Actions/user";
-
+import "./Login.css";
 const Register = () => {
   const [newUser, setNewUser] = useState({});
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Register = () => {
     navigate("/profile");
   };
   return (
-    <div>
+    <div className="login-container ">
       <h2>Register page</h2>
       <Form.Label>Name</Form.Label>
       <Form.Control
@@ -48,7 +48,12 @@ const Register = () => {
         name="phone"
         onChange={handleChange}
       />
-      <Button variant="primary" type="submit" onClick={handleUser}>
+      <Button
+        className="btn-login"
+        variant="primary"
+        type="submit"
+        onClick={handleUser}
+      >
         Submit
       </Button>
     </div>

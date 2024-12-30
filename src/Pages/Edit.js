@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useMatch, useNavigate } from "react-router-dom";
 import { editProduct, getProduct } from "../JS/Actions/product";
-
+import "./Login.css";
 const Edit = () => {
   const dispatch = useDispatch();
   const [newProduct, setNewProduct] = useState({});
@@ -21,7 +21,7 @@ const Edit = () => {
     navigate(-1);
   };
   return (
-    <div>
+    <div className="login-container">
       <Form.Label>Name</Form.Label>
       <Form.Control
         type="text"

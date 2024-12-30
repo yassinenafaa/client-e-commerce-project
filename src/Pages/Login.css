@@ -1,0 +1,15 @@
+.login-container {
+  width: 80%;
+  margin: 2% 10%;
+  background: #3b556d;
+  padding: 3%;
+  color: #fcf6f3;
+  border-radius: 10px;
+}
+.login-title {
+  color: #fcf6f3;
+}
+
+.btn-login {
+  margin-top: 2%;
+}

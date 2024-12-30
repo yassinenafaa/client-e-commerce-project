@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import "./Home.css";
 const Home = () => {
-    return (
-        <div>Home</div>
-    )
-}
+  return (
+    <div className="welcome">
+      <h1>
+        <strong>Welcome to Marketizeo!</strong>
+      </h1>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

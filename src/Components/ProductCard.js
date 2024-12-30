@@ -3,15 +3,18 @@ import { Button, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { deleteProduct } from "../JS/Actions/product";
-
+import "../Components/ProductCard.css";
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userReducer.user);
   return (
-    <div>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+    <div className="card-container">
+      <Card style={{ width: "17rem" }}>
+        <Card.Img
+          variant="top"
+          src="https://emc2rrspvpp.exactdn.com/wp-content/uploads/2023/03/Centric-v7.6_Apparel-banner_1248x800px.jpg?lossy=1&quality=92&webp=92&ssl=1"
+        />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>{product.description}</Card.Text>

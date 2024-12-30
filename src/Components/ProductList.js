@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../JS/Actions/product";
 import ProductCard from "./ProductCard";
-
+import "../Components/ProductList.css";
 const ProductList = () => {
   const dispatch = useDispatch();
   const listProducts = useSelector(
@@ -13,13 +13,7 @@ const ProductList = () => {
     dispatch(getProducts());
   }, [dispatch]);
   return (
-    <div
-      style={{
-        display: "flex",
-        margin: "2% 10%",
-        justifyContent: "space-around",
-      }}
-    >
+    <div className="product-list">
       {load ? (
         <h2>loadinnnnnngg....</h2>
       ) : (
